@@ -1,0 +1,92 @@
+/* الإعدادات الأساسية */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #333;
+    overflow: hidden;
+    animation: bodyAnimation 3s infinite alternate;
+}
+
+/* نافذة اختيار اللغة */
+.language-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    animation: fadeIn 1s ease;
+}
+
+.language-modal .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    animation: slideIn 1s ease;
+}
+
+.language-modal button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.language-modal button:hover {
+    background-color: #0056b3;
+}
+
+/* قائمة اختيار اللغة في أعلى الصفحة */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-switcher button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.language-switcher button:hover {
+    background-color: #0056b3;
+}
+
+/* إعدادات عامة للمحتوى */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffffd9;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+    opacity: 0;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #4a90e2;
+    animation: titleZoom 1s ease-in-out forwards;
+}
