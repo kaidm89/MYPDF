@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">تحويل الصور والنصوص إلى PDF</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- نافذة اختيار اللغة عند دخول الموقع -->
+    <div id="languageModal" class="language-modal">
+        <div class="modal-content">
+            <h2>اختر لغتك المفضلة</h2>
+            <button onclick="chooseLanguage('ar')">العربية</button>
+            <button onclick="chooseLanguage('en')">English</button>
+            <button onclick="chooseLanguage('hi')">हिन्दी</button>
+            <button onclick="chooseLanguage('fr')">Français</button>
+        </div>
+    </div>
+
+    <!-- قائمة اختيار اللغة في أعلى الصفحة -->
+    <div class="language-switcher">
+        <button onclick="changeLanguage('ar')">العربية</button>
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('hi')">हिन्दी</button>
+        <button onclick="changeLanguage('fr')">Français</button>
+    </div>
+
+    <div class="container">
+        <h1 class="title" id="title">تحويل الصور والنصوص إلى PDF</h1>
+        <p id="usageInfo" class="info animate"></p>
+
+        <!-- تحويل الصور إلى PDF -->
+        <div class="converter animate" id="imageConverter">
+            <h2 id="imageTitle">تحويل الصور إلى PDF</h2>
+            <input type="file" id="imageInput" accept="image/*" multiple>
+            <button onclick="convertImagesToPDF()" id="imageButton">تحويل الصور إلى PDF</button>
+        </div>
+
+        <!-- تحويل النصوص إلى PDF -->
+        <div class="converter animate" id="textConverter">
+            <h2 id="textTitle">تحويل النصوص إلى PDF</h2>
+            <textarea id="textInput" rows="10" placeholder="أدخل النص هنا..." id="textPlaceholder"></textarea>
+            <button onclick="convertTextToPDF()" id="textButton">تحويل النص إلى PDF</button>
+        </div>
+        
+        <div class="pro-message animate" id="proMessage" style="display: none;">
+            <p id="proMessageText">لقد وصلت إلى الحد الأقصى من المحاولات. لتفعيل المزيد من المحاولات، الرجاء تفعيل خاصية PRO.</p>
+            <button onclick="activatePro()" id="proButton">تفعيل PRO - $1</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
